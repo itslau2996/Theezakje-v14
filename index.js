@@ -39,4 +39,8 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.login(token);
-// TODO Make these commands: Avatar.js, invite.js, report.js, stats.js
+/*
+TODO 
+Make these commands: Avatar.js, invite.js, report.js, stats.js. 
+Update: help.js for new commands.
+*/
