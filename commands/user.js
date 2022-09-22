@@ -17,7 +17,8 @@ module.exports = {
                 .addFields(
                     { name: 'public profile', value: `ID: ${user.id}\n full username: ${user.tag}\n username: ${target.username}`, inline: false },
                     { name: 'Discord user since:', value: `${moment(user.createdAt).format('MMMM Do YYYY, H:mm:ss')}`, inline: false},
-                )
+                    { name: 'Avatar:', value: `[User link](${user.displayAvatarURL({ dynamic: true})})`}
+                    )
             await interaction.reply({ embeds: [response]})
         } else {
                 const user = interaction.user
@@ -26,7 +27,8 @@ module.exports = {
                     .addFields(
                         { name: 'public profile', value: `ID: ${user.id}\n full username: ${user.tag}`, inline: false },
                         { name: 'Discord user since:', value: `${moment(user.createdAt).format('MMMM Do YYYY, H:mm:ss')}`, inline: false},
-                    )
+                        { name: 'Avatar:', value: `[User link](${user.displayAvatarURL({ dynamic: true})})`}
+                        )
                 await interaction.reply({ embeds: [response]})
         }
     }
