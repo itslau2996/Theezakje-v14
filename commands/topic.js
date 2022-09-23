@@ -161,7 +161,7 @@ module.exports = {
             const randomMessage = topic_nl[Math.floor(Math.random() * topic_nl.length)];
             const PromoMessage = hints[Math.floor(Math.random() * hints.length)];
             const nl_topic_embed = new EmbedBuilder()
-                .setColor("#ff0000")
+                .setColor('DarkVividPink')
                 .setTitle('Topic')
                 .setDescription(`${randomMessage}\n${PromoMessage}`)
             await interaction.reply({ embeds: [nl_topic_embed]})
@@ -170,7 +170,7 @@ module.exports = {
             const randomMessage = topic_en[Math.floor(Math.random() * topic_en.length)];
             const PromoMessage = hints[Math.floor(Math.random() * hints.length)];
             const en_topic_embed = new EmbedBuilder()
-                .setColor("#D5A6BD")
+                .setColor('DarkVividPink')
                 .setTitle('Topic')
                 .setDescription(`${randomMessage}\n${PromoMessage}`)
             await interaction.reply({ embeds: [en_topic_embed] })

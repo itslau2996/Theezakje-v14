@@ -31,7 +31,7 @@ client.on('interactionCreate', async interaction => {
 	if (!command) return;
 
 	try {
-		await command.execute(interaction);
+		await command.execute(interaction, client);
 	} catch (error) {
 		console.error(error);
 		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
@@ -39,8 +39,3 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.login(token);
-/*
-TODO 
-Make these commands: Avatar.js, invite.js, report.js, stats.js. 
-Update: help.js for new commands.
-*/

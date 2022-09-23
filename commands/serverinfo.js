@@ -15,6 +15,7 @@ module.exports = {
 
 
         const response = new EmbedBuilder()
+            .setColor('DarkVividPink')
             .setThumbnail(serverIcon)
             .addFields(
                 { name: "**General**", value: `**Server ID**: ${server.id}\n**Server Owner**: <@${server.ownerId}>\n**Server Description:** ${server.description}\n**Server created at:** ${moment(server.createdAt).format('Do MMMM YYYY, H:mm:ss')}`, inline: false },
