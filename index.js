@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const { Client, Collection, GatewayIntentBits, ActivityType } = require('discord.js');
 const { config } = require('dotenv')
 
 config();
@@ -20,7 +20,8 @@ for (const file of commandFiles) {
 }
 
 client.once('ready', () => {
-	console.log('Ready!');
+	console.log(`Logged in as ${client.user.tag}`);
+	client.user.setActivity(`Slashcommands in ${client.guilds.cache.size} servers!`, { type: ActivityType.Listening });
 });
 
 client.on('interactionCreate', async interaction => {
@@ -39,3 +40,4 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.login(token);
+//TODO Make some sort of welcome command, which sends all the information?
