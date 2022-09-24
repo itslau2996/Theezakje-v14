@@ -22,6 +22,8 @@ for (const file of commandFiles) {
 client.once('ready', () => {
 	console.log(`Logged in as ${client.user.tag}`);
 	client.user.setActivity(`Slashcommands in ${client.guilds.cache.size} servers!`, { type: ActivityType.Listening });
+	function Status() { client.user.setActivity(`Slashcommands in ${client.guilds.cache.size} servers!`, { type: ActivityType.Listening }); }
+    setInterval(Status, 600000);
 });
 
 client.on('interactionCreate', async interaction => {
@@ -40,4 +42,3 @@ client.on('interactionCreate', async interaction => {
 });
 
 client.login(token);
-//TODO Make some sort of welcome command, which sends all the information?
