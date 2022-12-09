@@ -93,7 +93,7 @@ const topic_en = [
     "#14 What period in your life you want to do again?",
     "#15 Where do you spend the most time in your house?",
     "#22 What is the weirdest dream you ever had?",
-    "#22 What is something you would like to chance about yourself?",
+    "#22 What is something you would like to change about yourself?",
     "#23 Who has the most influence in your life?",
     "#24 What is the place you like the most?",
     "#25 Where did you go on your last vacation?",
